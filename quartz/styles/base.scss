@@ -557,6 +557,9 @@ img {
   max-width: 100%;
   border-radius: 5px;
   /*margin: 1rem 0;*/
+  display: block;         /* 让图片自己霸占一行 */
+  margin: 1rem auto;      /* 上下留 1rem 间距，左右自动平分（居中） */
+ 
   content-visibility: auto;
 }
 
