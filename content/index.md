@@ -1,5 +1,5 @@
 ---
-title: 欢迎来到zyt's知识库
+title: Welcome to Elton's Learning Notes
 ---
 本知识库内容基于`Obsidian`编写，在线分享使用`Quartz`完成。
 
