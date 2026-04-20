@@ -1,3 +1,39 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// ==========================================
+// 自定义样式 (针对 Quartz 网页端)
+// ==========================================
+
+// --- 1. 图片全局居中 ---
+article {
+  img {
+    display: block !important;
+    // 使用 auto 覆盖 base.scss 中的 0，实现左右自动平分（水平居中）
+    // 上下保留 1rem 的间距
+    margin: 1rem auto !important; 
+  }
+
+  // 很多时候 Markdown 解析器会把图片包在一个段落 <p> 里
+  // 这个规则确保包裹图片的段落文本对齐方式也是居中
+  p:has(> img) {
+    text-align: center;
+  }
+}
+
+// --- 2. 不严格换行（单回车换行，双回车分段） ---
+article {
+  // 针对正文段落开启换行保留
+  p {
+    white-space: pre-wrap !important;
+    // 保证双回车分段时，段落与段落之间有明显的间距
+    margin-bottom: 1.2rem !important; 
+  }
+
+  // 防误伤机制：表格内部或 Callouts 引用块里可能因为 HTML 源码的换行导致排版崩坏
+  // 如果你在使用中发现表格/引用块变形，可以取消下面代码的注释来排除它们
+  /*
+  table p, .callout-content p {
+    white-space: normal !important;
+  }
+  */
+}
