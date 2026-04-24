@@ -33,7 +33,9 @@ article {
 
   // 防误伤机制：表格内部或 Callouts 引用块里可能因为 HTML 源码的换行导致排版崩坏
   // 如果你在使用中发现表格/引用块变形，可以取消下面代码的注释来排除它们
+  /*
   table p, .callout-content p {
     white-space: normal !important;
   }
+  */
 }
