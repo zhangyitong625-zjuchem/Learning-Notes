@@ -44,7 +44,6 @@ article {
 .page article {
   // 覆盖基础的加粗标签，以及段落内嵌的加粗标签
   strong, b, p > strong {
-    font-family: "Microsoft YaHei", "SimHei", sans-serif !important;
     color: #69aaff !important; 
   }
 
