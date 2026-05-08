@@ -40,18 +40,16 @@ article {
   */
 }
 
-// --- 3. 自定义加粗和斜体样式 ---
-article {
-  // 修改加粗文本的字体和颜色
-  strong, b {
-    // 优先使用微软雅黑，若未安装则回退到黑体，最后回退到系统无衬线字体
+// --- 3. 自定义加粗和斜体样式 (修复权重冲突) ---
+.page article {
+  // 覆盖基础的加粗标签，以及段落内嵌的加粗标签
+  strong, b, p > strong {
     font-family: "Microsoft YaHei", "SimHei", sans-serif !important;
-    // 设置为粉色 (HotPink)，你可以根据喜好更换为其他色号，例如 #FFB6C1 (浅粉) 或 #FF1493 (深粉)
-    color: #FF69B4 !important; 
+    color: #69aaff !important; 
   }
 
   // 修改斜体文本的颜色
-  em, i {
-    color: #FF69B4 !important;
+  em, i, p > em {
+    color: #69aaff !important;
   }
 }
